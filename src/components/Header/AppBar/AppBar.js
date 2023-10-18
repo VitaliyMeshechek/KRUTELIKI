@@ -1,3 +1,7 @@
+import { useState } from 'react';
+import { AppBarWrapper, Header } from './AppBar.styled';
+import { Container } from 'components/ReusableComponents/MainContaner.styled.js';
+
 export const AppBar = () => {
   return (
     <>
