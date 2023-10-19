@@ -1,7 +1,9 @@
-import { Img } from './components/MainContent/MainContent.styled.js';
+import { Img } from './components/MainContent/MainContent.style';
 
 export const MainContent = () => {
-  return <Img>
-  <div></div>
-  </Img>;
+  return (
+    <Img>
+      <div></div>
+    </Img>
+  );
 };
