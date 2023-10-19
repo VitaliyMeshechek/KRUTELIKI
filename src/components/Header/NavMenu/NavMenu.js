@@ -1,4 +1,4 @@
-import { NavList, NavItem, Link } from './Nav.styled';
+import { NavList, NavItem, Link } from './NavMenu.styled';
 
 const links = [
   { id: 1, href: '/animators', text: 'Аніматори' },
