@@ -1,6 +1,6 @@
 import { Button, Bar } from '../BurgerMenu/BurgerMenu.styled';
 
-export const BurgerBtn = ({ toggle, isMenuOpen }) => {
+export const BurgerMenuBtn = ({ toggle, isMenuOpen }) => {
   return (
     <Button
       className={isMenuOpen ? 'active' : ''}
