@@ -12,7 +12,7 @@ export const AppBarWrapper = styled.div`
   height: 55px;
   z-index: 999;
 
-  background-color: ${colors.background};
+  background-color: ${colors.yellow};
   border: 0;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
@@ -29,3 +29,14 @@ export const Header = styled.header`
   display: flex;
   align-items: center;
 `;
+
+export const SiteNavWrapper = styled.div`
+  display: none;
+  @media screen and (min-width: ${breakPoints.desktop}) {
+    margin-left: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+`;
+
