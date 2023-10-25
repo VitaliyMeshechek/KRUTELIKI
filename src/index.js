@@ -6,7 +6,7 @@ import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="assembly-webpack-react">
+    <BrowserRouter basename="KRUTELIKI">
     <App />
     </BrowserRouter>
   </React.StrictMode>

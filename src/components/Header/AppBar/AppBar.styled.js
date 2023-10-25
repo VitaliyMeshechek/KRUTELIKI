@@ -7,23 +7,23 @@ export const AppBarWrapper = styled.div`
   position: fixed;
   top: 0;
   display: flex;
-  padding-top: 20px;
+  padding-top: 30px;
   padding-bottom: 5px;
   align-items: center;
   width: 100vw;
-  height: 55px;
-  z-index: 999;
+  height: 70px;
+  /* z-index: 999; */
 
   background-color: ${colors.background};
   border: 0;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
-    padding-top: 24px;
-    height: 70px;
+    padding-top: 80px;
+    height: 80px;
   }
   @media screen and (min-width: ${breakPoints.desktop}) {
-    padding-top: 20px;
-    height: 65px;
+    padding-top: 30px;
+    height: 100px;
   }
 `;
 
@@ -75,16 +75,12 @@ const carAnimation = keyframes`
   100%{transform: translateX(600px)}
 `;
 
-
-
-
 export const MovingCarSpeed = styled.div`
-
-    position: absolute;
-    left: 200px;
-    width: 100px;
-    height: 100px;
-    background-image: url(${Car});
+  position: absolute;
+  left: 200px;
+  width: 100px;
+  height: 100px;
+  background-image: url(${Car});
 
   @media screen and (min-width: ${breakPoints.tablet}) {
     left: 150px;
@@ -118,4 +114,3 @@ export const NavWrapper = styled.div`
     gap: 22px;
   }
 `;
-
