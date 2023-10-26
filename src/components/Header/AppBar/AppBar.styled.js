@@ -1,6 +1,12 @@
 import styled from '@emotion/styled';
 import { colors, breakPoints } from '../../../base-styles/variables';
-import Car from '../../../images/McQueen.png';
+// import carDesk1x from '../../../images/car-desk@1x.png';
+// import carDesk2x from '../../../images/car-desk@2x.png';
+// import carTab1x from '../../../images/car-tab@1x.png';
+// import carTab2x from '../../../images/car-tab@2x.png';
+// import carMob1x from '../../../images/car-mob@1x.png';
+// import carMob2x from '../../../images/car-mob@2x.png';
+import Car from '../../../images/car.png';
 import { keyframes } from '@emotion/react';
 
 export const AppBarWrapper = styled.div`
@@ -78,16 +84,23 @@ const carAnimation = keyframes`
 export const MovingCarSpeed = styled.div`
   position: absolute;
   left: 200px;
-  width: 100px;
-  height: 100px;
-  background-image: url(${Car});
+  width: 87px;
+  height: 50px;
+  background-image: none;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
+    /* width: 87px;
+    height: 50px;  */
+    background-image: url(${Car});
     left: 150px;
     animation: ${carAnimationTab} 4s;
     animation-iteration-count: infinite;
   }
+
   @media screen and (min-width: ${breakPoints.desktop}) {
+    /* width: 100px;
+    height: 58px; */
+    background-image: url(${Car});
     left: 200px;
     animation: ${carAnimation} 4s;
     animation-iteration-count: infinite;
