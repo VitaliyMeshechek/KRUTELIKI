@@ -14,7 +14,7 @@ export const AppBarWrapper = styled.div`
   height: 70px;
   /* z-index: 999; */
 
-  background-color: ${colors.background};
+  background-color: ${colors.white};
   border: 0;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
@@ -22,7 +22,7 @@ export const AppBarWrapper = styled.div`
     height: 80px;
   }
   @media screen and (min-width: ${breakPoints.desktop}) {
-    padding-top: 30px;
+    padding-top: 60px;
     height: 100px;
   }
 `;

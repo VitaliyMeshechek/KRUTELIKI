@@ -8,7 +8,7 @@ import logoMobile2x from '../../../images/logo/logo-mob@2x.png';
 
 export const Logo = ({ close }) => {
   return (
-    <LogoLink to="/main" onClick={close}>
+    <LogoLink to="/" onClick={close}>
       <picture>
         <source
           srcSet={`${logoDesktop1x} 1x, ${logoDesktop2x} 2x`}

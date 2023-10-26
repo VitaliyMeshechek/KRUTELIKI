@@ -11,7 +11,7 @@ export const MainBackground = styled.div`
   height: 601px;
   background-image: url(${mobileBG1x});
   background-repeat: no-repeat;
-  background-position: bottom;
+  /* background-position: bottom; */
   background-size: contain;
   /* z-index: 2000; */
   position: relative;
@@ -40,7 +40,7 @@ export const MainBackground = styled.div`
     background-image: url(${desktopBG1x});
     background-size: 950px 730px;
     height: 800px;
-    background-position: bottom right;
+    /* background-position: bottom right; */
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
