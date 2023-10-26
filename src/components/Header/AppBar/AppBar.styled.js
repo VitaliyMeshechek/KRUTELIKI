@@ -38,32 +38,32 @@ export const Header = styled.header`
   align-items: center;
 `;
 
-const carAnimationTab = keyframes`
-  0%{transform: translateX(0)}
-  5%{transform: translateX(30px)}
-  10%{transform: translateX(60px)}
-  15%{transform: translateX(90px)}
-  20%{transform: translateX(120px)}
-  25%{transform: translateX(150px)}
-  30%{transform: translateX(180px)}
-  35%{transform: translateX(210px)}
-  40%{transform: translateX(240px)}
-  45%{transform: translateX(270px)}
-  50%{transform: translateX(300px)}
-  55%{transform: translateX(330px)}
-  60%{transform: translateX(360px)}
-  65%{transform: translateX(390px)}
-  70%{transform: translateX(420px)}
-  75%{transform: translateX(450px)}
-`;
+// const carAnimationTab = keyframes`
+//   0%{transform: translateX(0)}
+//   5%{transform: translateX(30px)}
+//   10%{transform: translateX(60px)}
+//   15%{transform: translateX(90px)}
+//   20%{transform: translateX(120px)}
+//   25%{transform: translateX(150px)}
+//   30%{transform: translateX(180px)}
+//   35%{transform: translateX(210px)}
+//   40%{transform: translateX(240px)}
+//   45%{transform: translateX(270px)}
+//   50%{transform: translateX(300px)}
+//   55%{transform: translateX(330px)}
+//   60%{transform: translateX(360px)}
+//   65%{transform: translateX(390px)}
+//   70%{transform: translateX(420px)}
+//   75%{transform: translateX(450px)}
+// `;
 
 const carAnimation = keyframes`
-  0%{transform: translateX(0)}
-  5%{transform: translateX(30px)}
-  10%{transform: translateX(60px)}
-  15%{transform: translateX(90px)}
-  20%{transform: translateX(120px)}
-  25%{transform: translateX(150px)}
+  0%{transform: translateX(140px)}
+  5%{transform: translateX(145px)}
+  10%{transform: translateX(150px)}
+  15%{transform: translateX(155px)}
+  20%{transform: translateX(160px)}
+  25%{transform: translateX(170px)}
   30%{transform: translateX(180px)}
   35%{transform: translateX(210px)}
   40%{transform: translateX(240px)}
@@ -83,7 +83,7 @@ const carAnimation = keyframes`
 
 export const MovingCarSpeed = styled.div`
   position: absolute;
-  left: 200px;
+  /* left: 200px; */
   width: 87px;
   height: 50px;
   background-image: none;
@@ -92,8 +92,8 @@ export const MovingCarSpeed = styled.div`
     /* width: 87px;
     height: 50px;  */
     background-image: url(${Car});
-    left: 150px;
-    animation: ${carAnimationTab} 4s;
+    /* left: 150px; */
+    animation: ${carAnimation} 4s;
     animation-iteration-count: infinite;
   }
 
@@ -101,7 +101,7 @@ export const MovingCarSpeed = styled.div`
     /* width: 100px;
     height: 58px; */
     background-image: url(${Car});
-    left: 200px;
+    /* left: 150px; */
     animation: ${carAnimation} 4s;
     animation-iteration-count: infinite;
   }

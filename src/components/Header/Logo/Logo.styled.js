@@ -18,12 +18,12 @@ export const LogoImg = styled.img`
   }
 
   @media screen and (min-width: ${breakPoints.tablet}) {
-    width: 158px;
-    height: 110px;
+    width: 140px;
+    height: 97px;
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
-    width: 216px;
-    height: 150px;
+    width: 180px;
+    height: 125px;
   }
 `;
