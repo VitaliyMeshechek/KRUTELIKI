@@ -23,7 +23,6 @@ const modalContainer = document.getElementById('modal-root');
 //   );}
 
 const Modal = ({ toggleModal, children }) => {
-
   useEffect(() => {
     const onKeyDown = event => {
       if (event.code === 'Escape') {

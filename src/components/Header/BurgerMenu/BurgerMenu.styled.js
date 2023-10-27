@@ -6,10 +6,10 @@ export const Menu = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   width: 100vw;
   height: 100vh;
-  top: 100%;
+  top: 120%;
   left: 0;
 
   overflow-y: auto;
@@ -19,8 +19,16 @@ export const Menu = styled.div`
 
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
 
+  @media screen and (min-width: ${breakPoints.tablet}) {
+    top: 160%;
+    /* width: 170px;
+    height: 150px; */
+  }
+
   @media screen and (min-width: ${breakPoints.desktop}) {
-    display: none;
+    top: 160%;
+    /* width: 190px;
+    height: 150px; */
   }
 `;
 
@@ -30,8 +38,8 @@ export const Button = styled.button`
   align-items: center;
   justify-content: center;
 
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   float: left;
   outline: 0;
   border: 0;
@@ -69,7 +77,7 @@ export const Button = styled.button`
 
 export const Bar = styled.span`
   display: block;
-  width: 17px;
+  width: 20px;
   height: 2px;
   margin-bottom: 2px;
   border-radius: 1px;
@@ -78,6 +86,6 @@ export const Bar = styled.span`
 
 export const NavWrapper = styled.div`
   @media screen and (min-width: ${breakPoints.tablet}) {
-    padding-top: 100px;
+    /* padding-top: 100px; */
   }
 `;

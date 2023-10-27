@@ -8,12 +8,16 @@ export const NavList = styled.ul`
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0;
-  gap: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 5px;
+
+  @media screen and (min-width: ${breakPoints.tablet}) {
+    gap: 10px;
+  }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
-    flex-direction: row;
-    gap: 40px;
+    gap: 20px;
   }
 `;
 
@@ -24,8 +28,8 @@ export const Link = styled(NavLink)`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
-  font-size: 32px;
-  line-height: 1.38;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.04em;
   color: ${colors.black};
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
@@ -36,8 +40,12 @@ export const Link = styled(NavLink)`
   &.active {
     color: ${colors.yellow};
   }
+
+  @media screen and (min-width: ${breakPoints.tablet}) {
+    font-size: 14px;
+  }
+
   @media screen and (min-width: ${breakPoints.desktop}) {
-    font-size: 20px;
-    line-height: 27px;
+    font-size: 16px;
   }
 `;

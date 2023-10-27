@@ -5,6 +5,7 @@ import {
   SiteNavWrapper,
   NavWrapper,
   MovingCarSpeed,
+  LineHeader,
 } from './AppBar.styled';
 import { Container } from 'components/ReusableComponents/MainContaner.styled';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
@@ -36,9 +37,10 @@ export const AppBar = () => {
             </SiteNavWrapper> */}
             <NavWrapper>
               <BurgerMenuBtn toggle={toggleMenu} isMenuOpen={menuOpen} />
+              <BurgerMenu isMenuOpen={menuOpen} openMenu={toggleMenu} />
             </NavWrapper>
-            <BurgerMenu isMenuOpen={menuOpen} openMenu={toggleMenu} />
           </Header>
+          <LineHeader />
         </Container>
       </AppBarWrapper>
     </>

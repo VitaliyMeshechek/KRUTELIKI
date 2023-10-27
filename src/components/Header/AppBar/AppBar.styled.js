@@ -38,6 +38,15 @@ export const Header = styled.header`
   align-items: center;
 `;
 
+export const LineHeader = styled.span`
+  display: block;
+  width: 100%;
+  height: 1px;
+  /* margin-bottom: 2px; */
+  border-radius: 1px;
+  background-color: ${colors.yellow};
+`;
+
 // const carAnimationTab = keyframes`
 //   0%{transform: translateX(0)}
 //   5%{transform: translateX(30px)}

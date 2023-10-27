@@ -23,7 +23,7 @@ export const LogoImg = styled.img`
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
-    width: 180px;
-    height: 125px;
+    width: 170px;
+    height: 118px;
   }
 `;
