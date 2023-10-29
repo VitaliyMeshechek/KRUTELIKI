@@ -28,7 +28,7 @@ export const Link = styled(NavLink)`
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.16;
   letter-spacing: 0.04em;
   color: ${colors.black};
@@ -42,10 +42,12 @@ export const Link = styled(NavLink)`
   }
 
   @media screen and (min-width: ${breakPoints.tablet}) {
-    font-size: 14px;
+    font-size: 18px;
+    line-height: 1.18;
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
-    font-size: 16px;
+    font-size: 22px;
+    line-height: 1.22;
   }
 `;

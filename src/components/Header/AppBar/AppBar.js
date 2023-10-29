@@ -7,11 +7,12 @@ import {
   MovingCarSpeed,
   LineHeader,
 } from './AppBar.styled';
-import { Container } from 'components/ReusableComponents/MainContaner.styled';
+import { Container } from 'components/ReusableComponents/MainContainer.styledd';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 import { NavMenu } from '../NavMenu/NavMenu';
 import { BurgerMenuBtn } from '../BurgerMenu/BurgerMenuBtn';
 import { Logo } from '../Logo/Logo';
+import { OrderBtn } from 'components/OrderForm/OrderBtn';
 
 export const AppBar = () => {
   const [menuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +32,9 @@ export const AppBar = () => {
         <Container>
           <Header>
             <Logo close={closeMenu} />
-            <MovingCarSpeed></MovingCarSpeed>
+            <MovingCarSpeed>
+              <OrderBtn />
+            </MovingCarSpeed>
             {/* <SiteNavWrapper>
               <NavMenu></NavMenu>
             </SiteNavWrapper> */}

@@ -24,11 +24,11 @@ export const AppBarWrapper = styled.div`
   border: 0;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
-    padding-top: 80px;
+    /* padding-top: 80px; */
     height: 80px;
   }
   @media screen and (min-width: ${breakPoints.desktop}) {
-    padding-top: 60px;
+    /* padding-top: 60px; */
     height: 100px;
   }
 `;
