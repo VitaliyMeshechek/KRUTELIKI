@@ -1,30 +1,27 @@
 import { useForm } from 'react-hook-form';
-import { toast } from 'react-toastify';
+import { FormTitle, Form, Label, Input, Button } from './OrderForm.styled';
+// import { toast } from 'react-toastify';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { useState, useEffect } from 'react';
-import { addContact } from 'redux/operations';
-import { selectContacts } from 'redux/selectors';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { useState, useEffect } from 'react';
 // import { Form, Label, Input, Button } from './ContactForm.styled';
 
 export const OrderForm = () => {
   // const contacts = useSelector(selectContacts);
-  const dispatch = useDispatch();
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [comment, setComment] = useState('');
+  // const dispatch = useDispatch();
+  // const [name, setName] = useState('');
+  // const [phone, setPhone] = useState('');
+  // const [comment, setComment] = useState('');
 
   const onSubmit = data => {
     console.log('data', data);
   };
 
-  const {
-    register,
-    handleSubmit,
-    errors,
-    formState: { isValid },
-  } = useForm({
-    mode: 'onChange',
+  const { register, handleSubmit } = useForm({
+    defaultValues: {
+      name: '',
+      phone: '',
+    },
   });
 
   // const {
@@ -65,6 +62,7 @@ export const OrderForm = () => {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
+      <FormTitle>Контактна форма</FormTitle>
       <Label>
         Ім'я
         <Input
@@ -74,7 +72,6 @@ export const OrderForm = () => {
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
         />
-        {errors.name && <p>Fields must be filled!</p>}
       </Label>
       <Label>
         Телефон
@@ -85,7 +82,6 @@ export const OrderForm = () => {
           title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
         />
-        {errors.phone && <p>Fields must be filled!</p>}
       </Label>
 
       <Button type="submit">Надіслати</Button>

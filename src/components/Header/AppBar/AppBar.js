@@ -7,7 +7,7 @@ import {
   MovingCarSpeed,
   LineHeader,
 } from './AppBar.styled';
-import { Container } from 'components/ReusableComponents/MainContainer.styledd';
+import { Container } from 'components/ReusableComponents/MainContainer.styled';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
 import { NavMenu } from '../NavMenu/NavMenu';
 import { BurgerMenuBtn } from '../BurgerMenu/BurgerMenuBtn';
