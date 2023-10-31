@@ -1,10 +1,15 @@
 import { Container } from 'components/ReusableComponents/MainContainer.styled';
 import { OrderForm } from './OrderForm';
+import { OrderBtnWrapper, OrderLink } from './OrderBtn.styled';
 
 export const OrderBtn = () => {
   return (
-    <Container>
-      <OrderForm />
-    </Container>
+    <OrderBtnWrapper>
+      <OrderLink>
+        <Container>
+          <OrderForm />
+        </Container>
+      </OrderLink>
+    </OrderBtnWrapper>
   );
 };
