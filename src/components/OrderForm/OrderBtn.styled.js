@@ -7,14 +7,16 @@ export const OrderBtnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
-  padding-top: 38px;
-  padding-bottom: 40px;
+  /* gap: 12px; */
+  /* padding-top: 8px; */
+  padding-bottom: 20px;
+  padding-left: 180px;
   @media screen and (min-width: ${breakPoints.tablet}) {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    padding: 0;
+    padding-top: 45px;
+    padding-left: 0px;
   }
 `;
 export const OrderLink = styled(NavLink)`
@@ -24,7 +26,7 @@ export const OrderLink = styled(NavLink)`
   gap: 8px;
   padding-top: 9px;
   padding-bottom: 9px;
-  min-width: 165px;
+  /* min-width: 165px; */
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
@@ -36,8 +38,8 @@ export const OrderLink = styled(NavLink)`
   border-radius: 40px;
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   @media screen and (min-width: ${breakPoints.tablet}) {
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
 
   :hover,

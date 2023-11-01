@@ -1,14 +1,13 @@
 import { Container } from 'components/ReusableComponents/MainContainer.styled';
 import { OrderForm } from './OrderForm';
-import { OrderBtnWrapper, OrderLink } from './OrderBtn.styled';
+import { OrderBtnWrapper, OrderLink, Icon } from './OrderBtn.styled';
 
 export const OrderBtn = () => {
   return (
     <OrderBtnWrapper>
       <OrderLink>
-        <Container>
-          <OrderForm />
-        </Container>
+        Замовити
+        <Icon />
       </OrderLink>
     </OrderBtnWrapper>
   );
