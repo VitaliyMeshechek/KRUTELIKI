@@ -15,7 +15,7 @@ export const OrderBtnWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    padding-top: 45px;
+    padding-bottom: 60px;
     padding-left: 0px;
   }
 `;

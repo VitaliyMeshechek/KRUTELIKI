@@ -94,7 +94,7 @@ export const MovingCarSpeed = styled.div`
   position: absolute;
   /* left: 200px; */
   width: 87px;
-  height: 50px;
+  min-height: 50px;
   background-image: none;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
