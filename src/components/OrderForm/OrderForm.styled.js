@@ -1,6 +1,37 @@
 import styled from '@emotion/styled';
 import { colors, breakPoints } from 'base-styles/variables';
 
+export const BackdropForm = styled.div`
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 50px;
+  width: 650px;
+  height: 700px;
+  top: 0;
+  left: 0;
+
+  overflow-y: auto;
+  /* background-color: ${colors.background}; */
+
+  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(300%)')};
+
+  @media screen and (min-width: ${breakPoints.tablet}) {
+    top: -130%;
+    /* width: 170px;
+    height: 150px; */
+  }
+
+  @media screen and (min-width: ${breakPoints.desktop}) {
+    top: -130%;
+    /* width: 190px;
+    height: 150px; */
+  }
+`;
+
 export const FormTitle = styled.h2`
   font-weight: 500;
   font-size: 24px;

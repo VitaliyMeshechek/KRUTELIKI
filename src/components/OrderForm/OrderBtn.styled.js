@@ -3,6 +3,14 @@ import { NavLink } from 'react-router-dom';
 import { TbPaw } from 'react-icons/tb';
 import { colors, breakPoints } from '../../base-styles/variables';
 
+export const Button = styled.button`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+`;
+
 export const OrderBtnWrapper = styled.div`
   position: absolute;
   display: flex;

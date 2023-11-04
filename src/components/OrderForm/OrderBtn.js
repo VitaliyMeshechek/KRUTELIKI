@@ -1,11 +1,17 @@
 import { Container } from 'components/ReusableComponents/MainContainer.styled';
 import { OrderForm } from './OrderForm';
-import { OrderBtnWrapper, OrderLink } from './OrderBtn.styled';
+import { OrderBtnWrapper, OrderLink, Button } from './OrderBtn.styled';
 
-export const OrderBtn = () => {
+export const OrderBtn = ({ toggleOrder, isOrderFormOpen }) => {
   return (
-    <OrderBtnWrapper>
-      <OrderLink>Замовити</OrderLink>
-    </OrderBtnWrapper>
+    <Button
+      className={isOrderFormOpen ? 'active' : ''}
+      aria-label="Open order form"
+      onClick={toggleOrder}
+    >
+      <OrderBtnWrapper>
+        <OrderLink>Замовити</OrderLink>
+      </OrderBtnWrapper>
+    </Button>
   );
 };

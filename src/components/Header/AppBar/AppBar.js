@@ -13,19 +13,34 @@ import { NavMenu } from '../NavMenu/NavMenu';
 import { BurgerMenuBtn } from '../BurgerMenu/BurgerMenuBtn';
 import { Logo } from '../Logo/Logo';
 import { OrderBtn } from 'components/OrderForm/OrderBtn';
+import { OrderForm } from 'components/OrderForm/OrderForm';
 
 export const AppBar = () => {
   const [menuOpen, setIsMenuOpen] = useState(false);
+  const [orderFormOpen, setIsOrderFormOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
   };
+
   const closeMenu = () => {
     if (menuOpen) {
       setIsMenuOpen(false);
     }
     return;
   };
+
+  const toggleOrderForm = () => {
+    setIsOrderFormOpen(prevIsOrderFormOpen => !prevIsOrderFormOpen);
+  };
+
+  const closeOrderForm = () => {
+    if (orderFormOpen) {
+      setIsOrderFormOpen(false);
+    }
+    return;
+  };
+
   return (
     <>
       <AppBarWrapper>
@@ -34,7 +49,14 @@ export const AppBar = () => {
             <Logo close={closeMenu} />
 
             <MovingCarSpeed>
-              <OrderBtn />
+              <OrderBtn
+                toggleOrder={toggleOrderForm}
+                isOrderFormOpen={orderFormOpen}
+              />
+              <OrderForm
+                isOrderFormOpen={orderFormOpen}
+                openForm={toggleOrderForm}
+              />
             </MovingCarSpeed>
 
             {/* <SiteNavWrapper>
