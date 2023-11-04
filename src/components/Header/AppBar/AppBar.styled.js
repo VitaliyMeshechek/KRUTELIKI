@@ -34,6 +34,7 @@ export const AppBarWrapper = styled.div`
 `;
 
 export const Header = styled.header`
+  position: relative;
   display: flex;
   align-items: center;
 `;
@@ -94,7 +95,7 @@ export const MovingCarSpeed = styled.div`
   position: absolute;
   /* left: 200px; */
   width: 87px;
-  min-height: 50px;
+  height: 50px;
   background-image: none;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
@@ -104,6 +105,10 @@ export const MovingCarSpeed = styled.div`
     /* left: 150px; */
     animation: ${carAnimation} 4s;
     animation-iteration-count: infinite;
+    &:hover {
+      animation-play-state: paused;
+    }
+    top: 50px;
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {

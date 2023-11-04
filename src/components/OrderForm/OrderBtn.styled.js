@@ -4,6 +4,7 @@ import { TbPaw } from 'react-icons/tb';
 import { colors, breakPoints } from '../../base-styles/variables';
 
 export const OrderBtnWrapper = styled.div`
+  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,8 +16,8 @@ export const OrderBtnWrapper = styled.div`
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    padding-bottom: 60px;
-    padding-left: 0px;
+    bottom: 25px;
+    right: 0px;
   }
 `;
 export const OrderLink = styled(NavLink)`
@@ -52,10 +53,4 @@ export const OrderLink = styled(NavLink)`
     color: ${colors.background};
     background-color: ${colors.yellow};
   }
-`;
-
-export const Icon = styled(TbPaw)`
-  transform: rotate(25deg);
-  width: 24px;
-  height: 24px;
 `;
