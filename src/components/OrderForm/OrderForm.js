@@ -37,41 +37,7 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
     }
   };
 
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  //   reset,
-  // } = useForm({
-  //   defaultValues: {
-  //     name: '',
-  //     phone: '',
-  //   },
-  //   mode: 'onBlur',
-  // });
 
-  // console.log(contacts);
-
-  // const onSubmit = event => {
-  //   for (const contact of contacts) {
-  //     if (contact.name.toLowerCase() === event.name.toLowerCase()) {
-  //       toast.error(
-  //         `The entered ${event.name} already exists in contacts! Please enter another name!`
-  //       );
-  //       return;
-  //     }
-
-  //     if (contact.phone === event.phone) {
-  //       toast.error(
-  //         `The entered ${event.phone} already exists in contacts! Please enter another number!`
-  //       );
-  //       return;
-  //     }
-  //   }
-  //   dispatch(addContact(event));
-
-  //   reset();
-  // };
 
   return (
     <BackdropForm isOpen={isOrderFormOpen} onClick={onOrderMenuClick}>

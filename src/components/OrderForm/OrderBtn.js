@@ -9,9 +9,7 @@ export const OrderBtn = ({ toggleOrder, isOrderFormOpen }) => {
       aria-label="Open order form"
       onClick={toggleOrder}
     >
-      <OrderBtnWrapper>
-        <OrderLink>Замовити</OrderLink>
-      </OrderBtnWrapper>
+      <OrderLink>Замовити</OrderLink>
     </Button>
   );
 };

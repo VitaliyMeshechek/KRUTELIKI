@@ -96,6 +96,11 @@ export const MovingCarSpeed = styled.div`
   /* left: 200px; */
   width: 87px;
   height: 50px;
+
+  animation-play-state: running;
+  &:hover {
+    animation-play-state: paused;
+  }
   background-image: none;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
@@ -105,9 +110,7 @@ export const MovingCarSpeed = styled.div`
     /* left: 150px; */
     animation: ${carAnimation} 4s;
     animation-iteration-count: infinite;
-    &:hover {
-      animation-play-state: paused;
-    }
+
     top: 50px;
   }
 
@@ -118,6 +121,8 @@ export const MovingCarSpeed = styled.div`
     /* left: 150px; */
     animation: ${carAnimation} 4s;
     animation-iteration-count: infinite;
+
+    top: 50px;
   }
 `;
 
