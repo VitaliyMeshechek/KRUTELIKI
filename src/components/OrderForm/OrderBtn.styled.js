@@ -21,26 +21,6 @@ export const Button = styled.button`
   }
 `;
 
-// export const OrderBtnWrapper = styled.div`
-//   position: absolute;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   /* gap: 12px; */
-//   /* padding-top: 8px; */
-
-//   padding-left: 350px;
-//   padding-top: 50px;
-
-//   @media screen and (min-width: ${breakPoints.tablet}) {
-//     flex-direction: row;
-//     justify-content: center;
-//     padding-bottom: 20px;
-//     gap: 20px;
-//     bottom: 25px;
-//     right: 0px;
-//   }
-// `;
 export const OrderLink = styled(NavLink)`
   display: flex;
   justify-content: center;

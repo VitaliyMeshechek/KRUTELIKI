@@ -18,6 +18,7 @@ import { OrderForm } from 'components/OrderForm/OrderForm';
 export const AppBar = () => {
   const [menuOpen, setIsMenuOpen] = useState(false);
   const [orderFormOpen, setIsOrderFormOpen] = useState(false);
+  const [anim, setAnim] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
@@ -48,7 +49,7 @@ export const AppBar = () => {
           <Header>
             <Logo close={closeMenu} />
 
-            <MovingCarSpeed>
+            <MovingCarSpeed className={anim ? 'slide' : ''}>
               <OrderBtn
                 toggleOrder={toggleOrderForm}
                 isOrderFormOpen={orderFormOpen}
