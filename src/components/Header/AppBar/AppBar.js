@@ -54,11 +54,11 @@ export const AppBar = () => {
                 toggleOrder={toggleOrderForm}
                 isOrderFormOpen={orderFormOpen}
               />
-              <OrderForm
-                isOrderFormOpen={orderFormOpen}
-                openForm={toggleOrderForm}
-              />
             </MovingCarSpeed>
+            <OrderForm
+              isOrderFormOpen={orderFormOpen}
+              openForm={toggleOrderForm}
+            />
 
             {/* <SiteNavWrapper>
               <NavMenu></NavMenu>

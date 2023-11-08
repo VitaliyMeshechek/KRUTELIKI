@@ -17,16 +17,18 @@ export const BackdropForm = styled.div`
 
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(300%)')};
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(200%)')};
 
   @media screen and (min-width: ${breakPoints.tablet}) {
-    top: -130%;
+    top: -40%;
+    left: 4%;
     /* width: 170px;
     height: 150px; */
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
-    top: -130%;
+    top: 0;
+    left: 25%;
     /* width: 190px;
     height: 150px; */
   }
