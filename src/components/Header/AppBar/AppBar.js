@@ -6,6 +6,7 @@ import {
   NavWrapper,
   MovingCarSpeed,
   LineHeader,
+  SlideCar,
 } from './AppBar.styled';
 import { Container } from 'components/ReusableComponents/MainContainer.styled';
 import { BurgerMenu } from '../BurgerMenu/BurgerMenu';
@@ -18,7 +19,6 @@ import { OrderForm } from 'components/OrderForm/OrderForm';
 export const AppBar = () => {
   const [menuOpen, setIsMenuOpen] = useState(false);
   const [orderFormOpen, setIsOrderFormOpen] = useState(false);
-  const [anim, setAnim] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
@@ -49,7 +49,7 @@ export const AppBar = () => {
           <Header>
             <Logo close={closeMenu} />
 
-            <MovingCarSpeed className={anim ? 'slide' : ''}>
+            <MovingCarSpeed>
               <OrderBtn
                 toggleOrder={toggleOrderForm}
                 isOrderFormOpen={orderFormOpen}
