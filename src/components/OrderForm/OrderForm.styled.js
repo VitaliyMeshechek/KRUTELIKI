@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { colors, breakPoints } from 'base-styles/variables';
+import BgOrderForm from '../../images/backgrounds/BackgroundOrderForm.png';
 
 export const BackdropForm = styled.div`
   position: absolute;
@@ -59,6 +60,15 @@ export const Form = styled.form`
   box-shadow: 3px 8px 14px rgba(136, 198, 253, 0.19);
   border-radius: 20px;
   padding: 40px 12px;
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-image: url(${BgOrderForm});
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${BgOrderForm});
+  }
 
   @media screen and (min-width: ${breakPoints.tablet}) {
     padding: 60px 75px;

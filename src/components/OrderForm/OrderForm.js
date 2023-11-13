@@ -1,4 +1,12 @@
 import { useForm } from 'react-hook-form';
+import * as React from 'react';
+import Checkbox from '@mui/material/Checkbox';
+import FormGroup from '@mui/material/FormGroup';
+import FormLabel from '@mui/material/FormLabel';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import { teal, yellow } from '@mui/material/colors';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import Favorite from '@mui/icons-material/Favorite';
 import {
   FormTitle,
   Form,
@@ -19,6 +27,7 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
   // const [name, setName] = useState('');
   // const [phone, setPhone] = useState('');
   // const [comment, setComment] = useState('');
+  const [checked, setChecked] = React.useState(true);
 
   const onSubmit = data => {
     console.log('data', data);
@@ -37,7 +46,11 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
     }
   };
 
+  const handleChange = event => {
+    setChecked(event.target.checked);
+  };
 
+  const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   return (
     <BackdropForm isOpen={isOrderFormOpen} onClick={onOrderMenuClick}>
@@ -62,10 +75,79 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-        </Label>
-
+        </Label>{' '}
+        <FormLabel
+          id="demo-radio-buttons-group-label"
+          sx={{
+            '& .MuiSvgIcon-root': { fontSize: 28 },
+            color: teal[50],
+          }}
+        >
+          Вибрати свято
+        </FormLabel>
+        <FormGroup>
+          <FormControlLabel
+            required
+            control={
+              <Checkbox
+                icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+                // checked={checked}
+                onChange={handleChange}
+                inputProps={{ 'aria-label': 'controlled' }}
+                // color="success"
+              />
+            }
+            label="Твій день народження"
+            sx={{
+              '& .MuiSvgIcon-root': { fontSize: 28 },
+              color: yellow[800],
+              '&.Mui-checked': {
+                bgcolor: yellow[600],
+              },
+            }}
+          />
+          <FormControlLabel
+            required
+            control={
+              <Checkbox
+                icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+                // checked={checked}
+                onChange={handleChange}
+                inputProps={{ 'aria-label': 'controlled' }}
+                color="success"
+              />
+            }
+            label="Веселі ігри"
+            sx={{
+              '& .MuiSvgIcon-root': { fontSize: 28 },
+              color: teal[50],
+            }}
+          />
+          <FormControlLabel
+            required
+            control={
+              <Checkbox
+                icon={<FavoriteBorder />}
+                checkedIcon={<Favorite />}
+                // checked={checked}
+                onChange={handleChange}
+                inputProps={{ 'aria-label': 'controlled' }}
+                color="success"
+              />
+            }
+            label="Розваги на воді"
+            sx={{
+              '& .MuiSvgIcon-root': { fontSize: 28 },
+              color: teal[50],
+            }}
+          />
+        </FormGroup>
         <Button type="submit">Надіслати</Button>
       </Form>
     </BackdropForm>
   );
 };
+
+// amber, blue, blueGrey, brown, common, cyan, deepOrange, deepPurple, green, grey, indigo, lightBlue, lightGreen, lime, orange, pink, purple, red, teal, yellow
