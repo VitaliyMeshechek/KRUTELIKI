@@ -4,7 +4,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormLabel from '@mui/material/FormLabel';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { teal, yellow } from '@mui/material/colors';
+import { teal, yellow, red } from '@mui/material/colors';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import {
@@ -90,20 +90,16 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
             required
             control={
               <Checkbox
-                icon={<FavoriteBorder />}
+                icon={<FavoriteBorder sx={{ color: red[500] }} />}
                 checkedIcon={<Favorite />}
-                // checked={checked}
-                onChange={handleChange}
-                inputProps={{ 'aria-label': 'controlled' }}
-                // color="success"
               />
             }
             label="Твій день народження"
             sx={{
               '& .MuiSvgIcon-root': { fontSize: 28 },
-              color: yellow[800],
-              '&.Mui-checked': {
-                bgcolor: yellow[600],
+              color: teal[50],
+              '& .Mui-checked': {
+                color: yellow[600],
               },
             }}
           />
@@ -111,36 +107,34 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
             required
             control={
               <Checkbox
-                icon={<FavoriteBorder />}
+                icon={<FavoriteBorder sx={{ color: red[500] }} />}
                 checkedIcon={<Favorite />}
-                // checked={checked}
-                onChange={handleChange}
-                inputProps={{ 'aria-label': 'controlled' }}
-                color="success"
               />
             }
             label="Веселі ігри"
             sx={{
               '& .MuiSvgIcon-root': { fontSize: 28 },
               color: teal[50],
+              '& .Mui-checked': {
+                color: yellow[600],
+              },
             }}
           />
           <FormControlLabel
             required
             control={
               <Checkbox
-                icon={<FavoriteBorder />}
+                icon={<FavoriteBorder sx={{ color: red[500] }} />}
                 checkedIcon={<Favorite />}
-                // checked={checked}
-                onChange={handleChange}
-                inputProps={{ 'aria-label': 'controlled' }}
-                color="success"
               />
             }
             label="Розваги на воді"
             sx={{
               '& .MuiSvgIcon-root': { fontSize: 28 },
               color: teal[50],
+              '& .Mui-checked': {
+                color: yellow[600],
+              },
             }}
           />
         </FormGroup>

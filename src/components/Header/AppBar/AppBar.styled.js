@@ -131,13 +131,13 @@ export const MovingCarSpeed = styled.div`
 
   @media (min-width: ${breakPoints.tablet}) {
     background-image: url(${Car});
-    animation: ${carAnimationForTablet} 7s;
+    animation: ${carAnimationForTablet} 10s;
     animation-iteration-count: infinite;
     top: 50px;
   }
   @media (min-width: ${breakPoints.desktop}) {
     background-image: url(${Car});
-    animation: ${carAnimationForDesktop} 7s;
+    animation: ${carAnimationForDesktop} 10s;
     animation-iteration-count: infinite;
     top: 70px;
   }
