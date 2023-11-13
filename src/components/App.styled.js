@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { breakPoints } from '../../src/base-styles/variables';
 import mobileBG1x from '../images/backgrounds/bg-mobile@1x.png';
 import mobileBG2x from '../images/backgrounds/bg-mobile@2x.png';
 import tabletBG1x from '../images/backgrounds/bg-tablet@1x.png';
@@ -22,7 +23,7 @@ export const MainBackground = styled.div`
     background-image: url(${mobileBG2x});
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: ${breakPoints.tablet}) {
     padding-top: 200px;
     background-image: url(${tabletBG1x});
     background-size: cover;
@@ -35,7 +36,7 @@ export const MainBackground = styled.div`
       background-image: url(${tabletBG2x});
     }
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: ${breakPoints.tablet}) {
     padding-top: 260px;
     background-image: url(${desktopBG1x});
     background-size: 950px 730px;

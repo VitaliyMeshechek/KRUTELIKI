@@ -6,6 +6,14 @@ import { colors, breakPoints } from '../../../base-styles/variables';
 // import carTab2x from '../../../images/car-tab@2x.png';
 // import carMob1x from '../../../images/car-mob@1x.png';
 // import carMob2x from '../../../images/car-mob@2x.png';
+import BgHedgehodDeskLg1x from '../../../images/backgrounds/bgHeader-desk@1x.png';
+import BgHedgehodDeskLg2x from '../../../images/backgrounds/bgHeader-desk@2x.png';
+import BgHedgehodDesk1x from '../../../images/backgrounds/bgHeader-desktop@1x.png';
+import BgHedgehodDesk2x from '../../../images/backgrounds/bgHeader-desktop@2x.png';
+import BgHedgehodTab1x from '../../../images/backgrounds/bgHeader-tab@1x.png';
+import BgHedgehodTab2x from '../../../images/backgrounds/bgHeader-tab@2x.png';
+import BgHedgehodMob1x from '../../../images/backgrounds/bgHeader-mob@1x.png';
+import BgHedgehodMob2x from '../../../images/backgrounds/bgHeader-mob@2x.png';
 import Car from '../../../images/car.png';
 import { keyframes } from '@emotion/react';
 
@@ -22,14 +30,55 @@ export const AppBarWrapper = styled.div`
 
   background-color: ${colors.white};
   border: 0;
+  background-size: auto 110px;
+  background-repeat: no-repeat;
+  background-image: url(${BgHedgehodMob1x});
 
-  @media screen and (min-width: ${breakPoints.tablet}) {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${BgHedgehodMob2x});
+  }
+
+  @media screen and (min-width: ${breakPoints.tablet}) and (max-width: 1023px) {
     /* padding-top: 80px; */
     /* height: 80px; */
+    background-size: 1000px 127px;
+    background-repeat: no-repeat;
+    background-image: url(${BgHedgehodTab1x});
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${BgHedgehodTab2x});
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    /* padding-top: 80px; */
+    /* height: 80px; */
+    background-size: 1180px 127px;
+    background-repeat: no-repeat;
+    background-image: url(${BgHedgehodDesk1x});
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${BgHedgehodDesk2x});
+    }
   }
   @media screen and (min-width: ${breakPoints.desktop}) {
     /* padding-top: 60px; */
     /* height: 100px; */
+    background-size: 1530px 147px;
+    background-repeat: no-repeat;
+    background-image: url(${BgHedgehodDeskLg1x});
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(${BgHedgehodDeskLg2x});
+    }
   }
 `;
 
@@ -45,7 +94,7 @@ export const LineHeader = styled.span`
   height: 1px;
   /* margin-bottom: 2px; */
   border-radius: 1px;
-  background-color: ${colors.yellow};
+  background-color: ${colors.red};
 `;
 
 const carAnimationForTablet = keyframes`

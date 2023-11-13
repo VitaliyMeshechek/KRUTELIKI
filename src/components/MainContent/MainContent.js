@@ -3,7 +3,7 @@ import { Img } from './components/MainContent/MainContent.style';
 export const MainContent = () => {
   return (
     <Img>
-      <div></div>
+      <div>1giihihi</div>
     </Img>
   );
 };
