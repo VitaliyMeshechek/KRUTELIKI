@@ -1,14 +1,21 @@
 import { Container } from 'components/ReusableComponents/MainContainer.styled';
 import { OrderForm } from './OrderForm';
 import { OrderBtnWrapper, OrderLink, Button } from './OrderBtn.styled';
+import ModalWrapper from 'components/ReusableComponents/Modal/ModalWrapper';
+import { useDispatch } from 'react-redux';
+import { showModal } from 'redux/modal/slice';
 
-export const OrderBtn = ({ toggleOrder, isOrderFormOpen }) => {
+export const OrderBtn = ({ toggleOrder }) => {
+  const dispatch = useDispatch();
+
+  const handleClose = () => {
+    dispatch(showModal(false));
+
+    toggleOrder();
+  };
+
   return (
-    <Button
-      className={isOrderFormOpen ? 'active' : ''}
-      aria-label="Open order form"
-      onClick={toggleOrder}
-    >
+    <Button onClick={handleClose}>
       <OrderLink>Замовити</OrderLink>
     </Button>
   );

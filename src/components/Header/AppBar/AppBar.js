@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { showModal } from 'redux/modal/slice';
 import {
   AppBarWrapper,
   Header,
@@ -19,6 +21,15 @@ import { OrderForm } from 'components/OrderForm/OrderForm';
 export const AppBar = () => {
   const [menuOpen, setIsMenuOpen] = useState(false);
   const [orderFormOpen, setIsOrderFormOpen] = useState(false);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  });
 
   const toggleMenu = () => {
     setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
@@ -33,6 +44,9 @@ export const AppBar = () => {
 
   const toggleOrderForm = () => {
     setIsOrderFormOpen(prevIsOrderFormOpen => !prevIsOrderFormOpen);
+    // dispatch(showModal(true));
+
+    // openModal();
   };
 
   const closeOrderForm = () => {
@@ -40,6 +54,12 @@ export const AppBar = () => {
       setIsOrderFormOpen(false);
     }
     return;
+  };
+
+  const handleKeyDown = e => {
+    if (e.code === 'Escape') {
+      dispatch(showModal(false));
+    }
   };
 
   return (
@@ -55,10 +75,7 @@ export const AppBar = () => {
                 isOrderFormOpen={orderFormOpen}
               />
             </MovingCarSpeed>
-            <OrderForm
-              isOrderFormOpen={orderFormOpen}
-              openForm={toggleOrderForm}
-            />
+            <OrderForm isOrderFormOpen={orderFormOpen} close={closeOrderForm} />
 
             {/* <SiteNavWrapper>
               <NavMenu></NavMenu>
