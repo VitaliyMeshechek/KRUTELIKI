@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
 import { colors, breakPoints } from 'base-styles/variables';
-import BgOrderForm from '../../images/backgrounds/BackgroundOrderForm.png';
+import BgOrderForm from '../../images/backgrounds/bg-paperDesk@1x.png';
 
 export const BackdropForm = styled.div`
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   width: 650px;
-  height: 700px;
+  height: 600px;
   top: 0;
   left: 0;
 
@@ -42,7 +42,8 @@ export const FormTitle = styled.h2`
   color: ${colors.black};
   text-align: center;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: -10px;
+  margin-top: -10px;
 
   @media screen and (min-width: ${breakPoints.tablet}) {
     font-size: 36px;
