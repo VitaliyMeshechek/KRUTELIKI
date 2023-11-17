@@ -1,5 +1,7 @@
 import { useForm } from 'react-hook-form';
 import * as React from 'react';
+import Box from '@mui/material/Box';
+import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormLabel from '@mui/material/FormLabel';
@@ -57,7 +59,39 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
     <BackdropForm isOpen={isOrderFormOpen} onClick={onOrderMenuClick}>
       <Form onSubmit={handleSubmit(onSubmit)}>
         <FormTitle>Контактна форма</FormTitle>
-        <Label>
+        <TextField
+          id="outlined-basic"
+          label="Ім'я"
+          variant="outlined"
+          placeholder="Андрій"
+          sx={{
+            '& > :not(style)': {
+              m: 1,
+              borderRadius: 40,
+              width: '49ch',
+              fontSize: 16,
+              textAlign: 'left',
+              // marginLeft: 'auto',
+            },
+          }}
+        />
+        <TextField
+          id="outlined-basic"
+          label="Телефон"
+          variant="outlined"
+          placeholder="+38096-123-45-67"
+          sx={{
+            '& > :not(style)': {
+              m: 1,
+              borderRadius: 40,
+              width: '49ch',
+              fontSize: 16,
+              textAlign: 'left',
+              // marginLeft: 'auto',
+            },
+          }}
+        />
+        {/* <Label>
           Ім'я
           <Input
             {...register('name')}
@@ -66,8 +100,8 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
             title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
             required
           />
-        </Label>
-        <Label>
+        </Label> */}
+        {/* <Label>
           Телефон
           <Input
             {...register('phone')}
@@ -76,7 +110,7 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
             title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
             required
           />
-        </Label>{' '}
+        </Label>{' '} */}
         <FormLabel
           id="demo-radio-buttons-group-label"
           sx={{
