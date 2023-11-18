@@ -15,7 +15,7 @@ export const Overlay = styled.div`
   height: 100vh;
 
   background: rgba(87, 86, 86, 0.6);
-  z-index: 1200;
+  // z-index: 1200;
 `;
 
 export const ModalView = styled.div`
@@ -31,7 +31,7 @@ export const ModalView = styled.div`
   border-radius: 20px;
   background-color: ${colors.white};
 
-  z-index: 1201;
+  /* z-index: 1201; */
 
   @media screen and (min-width: ${breakPoints.tablet}) {
     justify-content: center;

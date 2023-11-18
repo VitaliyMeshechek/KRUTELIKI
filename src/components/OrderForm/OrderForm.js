@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import * as React from 'react';
-import Box from '@mui/material/Box';
+import { useDispatch } from 'react-redux';
+// import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
@@ -18,6 +19,8 @@ import {
   BackdropForm,
 } from './OrderForm.styled';
 import ModalWrapper from 'components/ReusableComponents/Modal/ModalWrapper';
+
+import { showModal } from 'redux/modal/slice';
 // import { toast } from 'react-toastify';
 
 // import { useSelector, useDispatch } from 'react-redux';
@@ -26,7 +29,7 @@ import ModalWrapper from 'components/ReusableComponents/Modal/ModalWrapper';
 
 export const OrderForm = ({ isOrderFormOpen, openForm }) => {
   // const contacts = useSelector(selectContacts);
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   // const [name, setName] = useState('');
   // const [phone, setPhone] = useState('');
   // const [comment, setComment] = useState('');
@@ -56,42 +59,43 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
   const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
   return (
-    <BackdropForm isOpen={isOrderFormOpen} onClick={onOrderMenuClick}>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <FormTitle>Контактна форма</FormTitle>
-        <TextField
-          id="outlined-basic"
-          label="Ім'я"
-          variant="outlined"
-          placeholder="Андрій"
-          sx={{
-            '& > :not(style)': {
-              m: 1,
-              borderRadius: 40,
-              width: '49ch',
-              fontSize: 16,
-              textAlign: 'left',
-              // marginLeft: 'auto',
-            },
-          }}
-        />
-        <TextField
-          id="outlined-basic"
-          label="Телефон"
-          variant="outlined"
-          placeholder="+38096-123-45-67"
-          sx={{
-            '& > :not(style)': {
-              m: 1,
-              borderRadius: 40,
-              width: '49ch',
-              fontSize: 16,
-              textAlign: 'left',
-              // marginLeft: 'auto',
-            },
-          }}
-        />
-        {/* <Label>
+    <ModalWrapper padding="44px 12px 16px 12px">
+      <BackdropForm isOpen={isOrderFormOpen} onClick={onOrderMenuClick}>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <FormTitle>Контактна форма</FormTitle>
+          <TextField
+            id="outlined-basic"
+            label="Ім'я"
+            variant="outlined"
+            placeholder="Андрій"
+            sx={{
+              '& > :not(style)': {
+                m: 1,
+                borderRadius: 40,
+                width: '49ch',
+                fontSize: 16,
+                textAlign: 'left',
+                // marginLeft: 'auto',
+              },
+            }}
+          />
+          <TextField
+            id="outlined-basic"
+            label="Телефон"
+            variant="outlined"
+            placeholder="+38096-123-45-67"
+            sx={{
+              '& > :not(style)': {
+                m: 1,
+                borderRadius: 40,
+                width: '49ch',
+                fontSize: 16,
+                textAlign: 'left',
+                // marginLeft: 'auto',
+              },
+            }}
+          />
+          {/* <Label>
           Ім'я
           <Input
             {...register('name')}
@@ -101,7 +105,7 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
             required
           />
         </Label> */}
-        {/* <Label>
+          {/* <Label>
           Телефон
           <Input
             {...register('phone')}
@@ -111,72 +115,75 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
             required
           />
         </Label>{' '} */}
-        <FormLabel
-          id="demo-radio-buttons-group-label"
-          sx={{
-            fontSize: 28,
-            '& .MuiSvgIcon-root': {},
-            color: red[500],
-          }}
-        >
-          Вибрати свято
-        </FormLabel>
-        <FormGroup>
-          <FormControlLabel
-            required
-            control={
-              <Checkbox
-                icon={<FavoriteBorder sx={{ color: red[500] }} />}
-                checkedIcon={<Favorite />}
-              />
-            }
-            label="Твій день народження"
+          <FormLabel
+            id="demo-radio-buttons-group-label"
             sx={{
-              '& .MuiSvgIcon-root': { fontSize: 28 },
-              color: blue[800],
-              '& .Mui-checked': {
-                color: yellow[500],
-              },
+              fontSize: 28,
+              '& .MuiSvgIcon-root': {},
+              color: red[500],
             }}
-          />
-          <FormControlLabel
-            required
-            control={
-              <Checkbox
-                icon={<FavoriteBorder sx={{ color: red[500] }} />}
-                checkedIcon={<Favorite />}
-              />
-            }
-            label="Веселі ігри"
-            sx={{
-              '& .MuiSvgIcon-root': { fontSize: 28 },
-              color: blue[800],
-              '& .Mui-checked': {
-                color: yellow[500],
-              },
-            }}
-          />
-          <FormControlLabel
-            required
-            control={
-              <Checkbox
-                icon={<FavoriteBorder sx={{ color: red[500] }} />}
-                checkedIcon={<Favorite />}
-              />
-            }
-            label="Розваги на воді"
-            sx={{
-              '& .MuiSvgIcon-root': { fontSize: 28 },
-              color: blue[800],
-              '& .Mui-checked': {
-                color: yellow[500],
-              },
-            }}
-          />
-        </FormGroup>
-        <Button type="submit">Надіслати</Button>
-      </Form>
-    </BackdropForm>
+          >
+            Вибрати свято
+          </FormLabel>
+          <FormGroup>
+            <FormControlLabel
+              required
+              control={
+                <Checkbox
+                  icon={<FavoriteBorder sx={{ color: red[500] }} />}
+                  checkedIcon={<Favorite />}
+                />
+              }
+              label="Твій день народження"
+              sx={{
+                '& .MuiSvgIcon-root': { fontSize: 28 },
+                color: blue[800],
+                '& .Mui-checked': {
+                  color: yellow[600],
+                },
+              }}
+            />
+            <FormControlLabel
+              required
+              control={
+                <Checkbox
+                  icon={<FavoriteBorder sx={{ color: red[500] }} />}
+                  checkedIcon={<Favorite />}
+                />
+              }
+              label="Веселі ігри"
+              sx={{
+                '& .MuiSvgIcon-root': { fontSize: 28 },
+                color: blue[800],
+                '& .Mui-checked': {
+                  color: yellow[600],
+                },
+              }}
+            />
+            <FormControlLabel
+              required
+              control={
+                <Checkbox
+                  icon={<FavoriteBorder sx={{ color: red[500] }} />}
+                  checkedIcon={<Favorite />}
+                />
+              }
+              label="Розваги на воді"
+              sx={{
+                '& .MuiSvgIcon-root': { fontSize: 28 },
+                color: blue[800],
+                '& .Mui-checked': {
+                  color: yellow[600],
+                },
+              }}
+            />
+          </FormGroup>
+          <Button type="submit" onClick={() => dispatch(showModal(false))}>
+            Надіслати
+          </Button>
+        </Form>
+      </BackdropForm>
+    </ModalWrapper>
   );
 };
 

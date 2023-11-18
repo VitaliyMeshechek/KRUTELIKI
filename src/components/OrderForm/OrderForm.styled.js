@@ -3,13 +3,13 @@ import { colors, breakPoints } from 'base-styles/variables';
 import BgOrderForm from '../../images/backgrounds/bg-paperDesk@1x.png';
 
 export const BackdropForm = styled.div`
-  position: absolute;
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
-  width: 650px;
-  height: 600px;
+  width: 300px;
+  /* height: 600px; */
   top: 0;
   left: 0;
 
@@ -23,6 +23,7 @@ export const BackdropForm = styled.div`
   @media screen and (min-width: ${breakPoints.tablet}) {
     top: -40%;
     left: 4%;
+    width: 650px;
     /* width: 170px;
     height: 150px; */
   }
@@ -30,6 +31,7 @@ export const BackdropForm = styled.div`
   @media screen and (min-width: ${breakPoints.desktop}) {
     top: 0;
     left: 25%;
+    width: 650px;
     /* width: 190px;
     height: 150px; */
   }
@@ -73,7 +75,13 @@ export const Form = styled.form`
 
   @media screen and (min-width: ${breakPoints.tablet}) {
     padding: 60px 75px;
-    width: 608px;
+    /* width: 608px; */
+    margin: 140px auto 0;
+    border-radius: 40px;
+  }
+
+  @media screen and (min-width: ${breakPoints.desktop}) {
+    padding: 60px 75px;
     margin: 140px auto 0;
     border-radius: 40px;
   }
@@ -143,6 +151,7 @@ export const Button = styled.button`
   line-height: 1.35;
   letter-spacing: 0.04em;
   color: ${colors.white};
+  margin-top: 10px;
   border: none;
   :hover {
     transform: scale(1.02);

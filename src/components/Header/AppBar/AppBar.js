@@ -17,19 +17,13 @@ import { BurgerMenuBtn } from '../BurgerMenu/BurgerMenuBtn';
 import { Logo } from '../Logo/Logo';
 import { OrderBtn } from 'components/OrderForm/OrderBtn';
 import { OrderForm } from 'components/OrderForm/OrderForm';
+import ModalWrapper from 'components/ReusableComponents/Modal/ModalWrapper';
 
 export const AppBar = () => {
   const [menuOpen, setIsMenuOpen] = useState(false);
   const [orderFormOpen, setIsOrderFormOpen] = useState(false);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
-  });
 
   const toggleMenu = () => {
     setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
@@ -49,18 +43,13 @@ export const AppBar = () => {
     // openModal();
   };
 
-  const closeOrderForm = () => {
-    if (orderFormOpen) {
-      setIsOrderFormOpen(false);
-    }
-    return;
-  };
+  // const closeOrderForm = () => {
+  //   if (orderFormOpen) {
+  //     setIsOrderFormOpen(false);
+  //   }
+  //   return;
+  // };
 
-  const handleKeyDown = e => {
-    if (e.code === 'Escape') {
-      dispatch(showModal(false));
-    }
-  };
 
   return (
     <>
@@ -72,10 +61,10 @@ export const AppBar = () => {
             <MovingCarSpeed>
               <OrderBtn
                 toggleOrder={toggleOrderForm}
-                isOrderFormOpen={orderFormOpen}
               />
             </MovingCarSpeed>
-            <OrderForm isOrderFormOpen={orderFormOpen} close={closeOrderForm} />
+
+            <OrderForm isOrderFormOpen={orderFormOpen} />
 
             {/* <SiteNavWrapper>
               <NavMenu></NavMenu>

@@ -8,14 +8,14 @@ import { showModal } from 'redux/modal/slice';
 export const OrderBtn = ({ toggleOrder }) => {
   const dispatch = useDispatch();
 
-  const handleClose = () => {
-    dispatch(showModal(false));
+  const handleOpen = () => {
+    dispatch(showModal(true));
 
     toggleOrder();
   };
 
   return (
-    <Button onClick={handleClose}>
+    <Button onClick={handleOpen}>
       <OrderLink>Замовити</OrderLink>
     </Button>
   );
