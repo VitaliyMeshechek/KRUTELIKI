@@ -3,35 +3,32 @@ import { colors, breakPoints } from 'base-styles/variables';
 import BgOrderForm from '../../images/backgrounds/bg-paperDesk@1x.png';
 
 export const BackdropForm = styled.div`
-  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
-  width: 300px;
-  /* height: 600px; */
-  top: 0;
-  left: 0;
+  width: 660px;
+  /* height: 660px; */
 
-  overflow-y: auto;
-  /* background-color: ${colors.background}; */
+  /* overflow-y: auto;
 
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(200%)')};
+  transform: ${({ isOpen }) =>
+    isOpen ? 'translateX(0)' : 'translateX(200%)'}; */
 
   @media screen and (min-width: ${breakPoints.tablet}) {
-    top: -40%;
-    left: 4%;
-    width: 650px;
+    /* top: 0;
+    left: 0; */
+    /* width: 650px; */
     /* width: 170px;
     height: 150px; */
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
-    top: 0;
-    left: 25%;
-    width: 650px;
+    /* top: 0;
+    left: 0; */
+    /* width: 650px; */
     /* width: 190px;
     height: 150px; */
   }
