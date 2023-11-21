@@ -10,7 +10,7 @@ import Checkbox from '@mui/material/Checkbox';
 import FormGroup from '@mui/material/FormGroup';
 import FormLabel from '@mui/material/FormLabel';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import { teal, yellow, red, green, blue, amber } from '@mui/material/colors';
+import { grey, yellow, red, green, blue, brown } from '@mui/material/colors';
 import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
 import Favorite from '@mui/icons-material/Favorite';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -50,31 +50,25 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
     phone: yup.string().min(9).required(),
   });
 
-  const {
-    control,
-    register,
-    handleSubmit,
-    formState,
-    formState: { isSubmitSuccessful },
-    reset,
-  } = useForm({
+  const { control, handleSubmit, reset } = useForm({
     resolver: yupResolver(schema),
     defaultValues: {
       name: '',
       phone: '',
     },
-    mode: 'onBlur',
+    mode: 'onSubmit',
   });
 
   const onSubmit = data => {
     console.log('data', data);
+    reset();
   };
 
-  useEffect(() => {
-    if (formState.isSubmitSuccessful) {
-      reset({ name: '', phone: '' });
-    }
-  }, [formState, reset]);
+  // useEffect(() => {
+  //   if (formState.isSubmitSuccessful) {
+  //     reset();
+  //   }
+  // }, [formState, isSubmitSuccessful, reset]);
 
   // const onOrderMenuClick = e => {
   //   if (e.target) {
@@ -154,58 +148,58 @@ export const OrderForm = ({ isOrderFormOpen, openForm }) => {
             sx={{
               fontSize: 28,
               '& .MuiSvgIcon-root': {},
-              color: amber[500],
+              color: grey[900],
             }}
           >
             Вибрати свято
           </FormLabel>
           <FormGroup>
             <FormControlLabel
-              // required
+              required
               control={
                 <Checkbox
-                  icon={<FavoriteBorder sx={{ color: red[500] }} />}
+                  icon={<FavoriteBorder sx={{ color: red[900] }} />}
                   checkedIcon={<Favorite />}
                 />
               }
               label="Твій день народження"
               sx={{
                 '& .MuiSvgIcon-root': { fontSize: 28 },
-                color: blue[800],
+                color: blue[900],
                 '& .Mui-checked': {
                   color: yellow[500],
                 },
               }}
             />
             <FormControlLabel
-              // required
+              required
               control={
                 <Checkbox
-                  icon={<FavoriteBorder sx={{ color: red[500] }} />}
+                  icon={<FavoriteBorder sx={{ color: red[900] }} />}
                   checkedIcon={<Favorite />}
                 />
               }
               label="Веселі ігри"
               sx={{
                 '& .MuiSvgIcon-root': { fontSize: 28 },
-                color: blue[800],
+                color: blue[900],
                 '& .Mui-checked': {
                   color: yellow[500],
                 },
               }}
             />
             <FormControlLabel
-              // required
+              required
               control={
                 <Checkbox
-                  icon={<FavoriteBorder sx={{ color: red[500] }} />}
+                  icon={<FavoriteBorder sx={{ color: red[900] }} />}
                   checkedIcon={<Favorite />}
                 />
               }
               label="Розваги на воді"
               sx={{
                 '& .MuiSvgIcon-root': { fontSize: 28 },
-                color: blue[800],
+                color: blue[900],
                 '& .Mui-checked': {
                   color: yellow[500],
                 },

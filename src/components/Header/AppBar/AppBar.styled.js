@@ -24,61 +24,61 @@ export const AppBarWrapper = styled.div`
   padding-top: 30px;
   padding-bottom: 5px;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   /* height: 70px; */
   /* z-index: 999; */
 
   background-color: ${colors.white};
   border: 0;
-  background-size: auto 110px;
+  background-size: cover;
   background-repeat: no-repeat;
   background-image: url(${BgHedgehodMob1x});
 
-  @media (min-device-pixel-ratio: 2),
+  /* @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     background-image: url(${BgHedgehodMob2x});
-  }
+  } */
 
   @media screen and (min-width: ${breakPoints.tablet}) and (max-width: 1023px) {
     /* padding-top: 80px; */
     /* height: 80px; */
-    background-size: 1000px 127px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url(${BgHedgehodTab1x});
 
-    @media (min-device-pixel-ratio: 2),
+    /* @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(${BgHedgehodTab2x});
-    }
+    } */
   }
 
   @media screen and (min-width: 1024px) {
     /* padding-top: 80px; */
     /* height: 80px; */
-    background-size: 1180px 127px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url(${BgHedgehodDesk1x});
 
-    @media (min-device-pixel-ratio: 2),
+    /* @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(${BgHedgehodDesk2x});
-    }
+    } */
   }
   @media screen and (min-width: ${breakPoints.desktop}) {
     /* padding-top: 60px; */
     /* height: 100px; */
-    background-size: 1530px 147px;
+    background-size: cover;
     background-repeat: no-repeat;
     background-image: url(${BgHedgehodDeskLg1x});
 
-    @media (min-device-pixel-ratio: 2),
+    /* @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
       background-image: url(${BgHedgehodDeskLg2x});
-    }
+    } */
   }
 `;
 

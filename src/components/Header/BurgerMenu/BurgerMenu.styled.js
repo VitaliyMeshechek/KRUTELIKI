@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 import { colors, breakPoints } from '../../../base-styles/variables';
+import BgBurgerMenuDesk1x from '../../../images/backgrounds/bg-burgerMenuDesk@1x.png';
+import BgBurgerMenuDesk2x from '../../../images/backgrounds/bg-burgerMenuDesk@2x.png';
 
 export const Menu = styled.div`
   position: absolute;
@@ -7,17 +9,28 @@ export const Menu = styled.div`
   flex-direction: column;
   align-items: center;
   padding-bottom: 50px;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   top: 120%;
   left: 0;
 
   overflow-y: auto;
-  background-color: ${colors.background};
+  /* background-color: ${colors.background}; */
 
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-image: url(${BgBurgerMenuDesk1x});
+  object-fit: cover;
+
+  /* @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${BgBurgerMenuDesk2x});
+  } */
 
   @media screen and (min-width: ${breakPoints.tablet}) {
     top: 160%;
@@ -26,7 +39,8 @@ export const Menu = styled.div`
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
-    top: 160%;
+    top: 100%;
+    left: 0;
     /* width: 190px;
     height: 150px; */
   }
