@@ -25,14 +25,15 @@ export const AppBarWrapper = styled.div`
   padding-bottom: 5px;
   align-items: center;
   width: 100%;
-  /* height: 70px; */
-  /* z-index: 999; */
 
   background-color: ${colors.white};
   border: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-image: url(${BgHedgehodMob1x});
+  /* background-size: cover; */
+
+  @media screen and (min-width: ${breakPoints.mobile}) and (max-width: 767px) {
+    background-repeat: no-repeat;
+    background-image: url(${BgHedgehodMob1x});
+  }
 
   /* @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -43,7 +44,7 @@ export const AppBarWrapper = styled.div`
   @media screen and (min-width: ${breakPoints.tablet}) and (max-width: 1023px) {
     /* padding-top: 80px; */
     /* height: 80px; */
-    background-size: cover;
+    background-size: cover 148px;
     background-repeat: no-repeat;
     background-image: url(${BgHedgehodTab1x});
 
@@ -57,7 +58,7 @@ export const AppBarWrapper = styled.div`
   @media screen and (min-width: 1024px) {
     /* padding-top: 80px; */
     /* height: 80px; */
-    background-size: cover;
+    /* background-size: cover; */
     background-repeat: no-repeat;
     background-image: url(${BgHedgehodDesk1x});
 
@@ -67,10 +68,11 @@ export const AppBarWrapper = styled.div`
       background-image: url(${BgHedgehodDesk2x});
     } */
   }
-  @media screen and (min-width: ${breakPoints.desktop}) {
+  @media screen and (min-width: ${breakPoints.desktop}) and (max-width: 2560px) {
     /* padding-top: 60px; */
     /* height: 100px; */
-    background-size: cover;
+    /* width: 100vw; */
+    background-size: 1450px 148px;
     background-repeat: no-repeat;
     background-image: url(${BgHedgehodDeskLg1x});
 

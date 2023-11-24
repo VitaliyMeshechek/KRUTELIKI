@@ -11,7 +11,7 @@ export const Menu = styled.div`
   padding-bottom: 50px;
   width: 100%;
   height: 100vh;
-  top: 120%;
+  top: 108%;
   left: 0;
 
   overflow-y: auto;
@@ -19,7 +19,7 @@ export const Menu = styled.div`
 
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
-  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(300%)')};
 
   background-size: auto auto;
   background-repeat: no-repeat;
@@ -33,13 +33,13 @@ export const Menu = styled.div`
   } */
 
   @media screen and (min-width: ${breakPoints.tablet}) {
-    top: 160%;
+    top: 100%;
     /* width: 170px;
     height: 150px; */
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
-    top: 100%;
+    top: 101%;
     left: 0;
     /* width: 190px;
     height: 150px; */
