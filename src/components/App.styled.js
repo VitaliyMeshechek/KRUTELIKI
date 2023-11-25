@@ -8,14 +8,15 @@ import desktopBG1x from '../images/backgrounds/bg-desktop@1x.png';
 import desktopBG2x from '../images/backgrounds/bg-desktop@2x.png';
 
 export const MainBackground = styled.div`
+  position: relative;
   padding-top: 100px;
   height: 601px;
   background-image: url(${mobileBG1x});
   background-repeat: no-repeat;
-  /* background-position: bottom; */
+  background-position: center;
+  background-position: bottom;
   background-size: contain;
   /* z-index: 2000; */
-  position: relative;
 
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
@@ -29,6 +30,8 @@ export const MainBackground = styled.div`
     background-size: cover;
     height: 1193px;
     background-size: 818px 980px;
+    background-position: center;
+    background-position: bottom;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -36,11 +39,13 @@ export const MainBackground = styled.div`
       background-image: url(${tabletBG2x});
     }
   }
-  @media screen and (min-width: ${breakPoints.tablet}) {
+  @media screen and (min-width: ${breakPoints.desktop}) {
     padding-top: 260px;
     background-image: url(${desktopBG1x});
     background-size: 950px 730px;
     height: 800px;
+    background-position: center;
+    background-position: bottom;
     /* background-position: bottom right; */
 
     @media (min-device-pixel-ratio: 2),

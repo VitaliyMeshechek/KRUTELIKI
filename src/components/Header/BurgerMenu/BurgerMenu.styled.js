@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { colors, breakPoints } from '../../../base-styles/variables';
-import BgBurgerMenuDesk1x from '../../../images/backgrounds/bg-burgerMenuDesk@1x.png';
-import BgBurgerMenuDesk2x from '../../../images/backgrounds/bg-burgerMenuDesk@2x.png';
+import BgBurgerMenuDesk from '../../../images/backgrounds/bg-burgerMenuDesk@1x.png';
+import BgBurgerMenuTab from '../../../images/backgrounds/bg-burgerMenuTab@1x.png';
+import BgBurgerMenuMob from '../../../images/backgrounds/bg-burgerMenuMob@1x.png';
 
 export const Menu = styled.div`
   position: absolute;
@@ -11,7 +12,7 @@ export const Menu = styled.div`
   padding-bottom: 50px;
   width: 100%;
   height: 100vh;
-  top: 108%;
+  top: 101%;
   left: 0;
 
   overflow-y: auto;
@@ -21,28 +22,28 @@ export const Menu = styled.div`
 
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(300%)')};
 
-  background-size: auto auto;
+  background-size: 280px 294px;
   background-repeat: no-repeat;
-  background-image: url(${BgBurgerMenuDesk1x});
-  object-fit: cover;
-
-  /* @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    background-image: url(${BgBurgerMenuDesk2x});
-  } */
+  background-image: url(${BgBurgerMenuMob});
+  /* object-fit: cover; */
 
   @media screen and (min-width: ${breakPoints.tablet}) {
     top: 100%;
-    /* width: 170px;
-    height: 150px; */
+    background-size: 708px 724px;
+    background-repeat: no-repeat;
+    background-image: url(${BgBurgerMenuTab});
   }
 
   @media screen and (min-width: ${breakPoints.desktop}) {
     top: 101%;
-    left: 0;
-    /* width: 190px;
-    height: 150px; */
+    background-repeat: no-repeat;
+    background-image: url(${BgBurgerMenuDesk});
+    /* object-fit: cover; */
+    background-size: auto;
+    /* min-width: 1280px;
+    min-height: 812px; */
+    /* min-width: 1440px;
+    height: auto; */
   }
 `;
 

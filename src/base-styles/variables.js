@@ -17,4 +17,5 @@ export const colors = {
   green: '#00C3AD',
   gray: '#888888',
   white: '#FFFFFF',
+  goldenrod: '#DAA520',
 };
