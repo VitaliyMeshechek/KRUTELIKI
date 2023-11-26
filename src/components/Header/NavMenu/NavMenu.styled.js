@@ -21,7 +21,7 @@ export const NavList = styled.ul`
 
   @media screen and (min-width: ${breakPoints.desktop}) {
     gap: 20px;
-    margin-top: 450px;
+    margin-top: 300px;
   }
 `;
 

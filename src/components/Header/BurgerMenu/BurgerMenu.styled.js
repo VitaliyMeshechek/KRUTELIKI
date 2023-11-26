@@ -39,7 +39,7 @@ export const Menu = styled.div`
     background-repeat: no-repeat;
     background-image: url(${BgBurgerMenuDesk});
     /* object-fit: cover; */
-    background-size: auto;
+    background-size: 1280px 900px;
     /* min-width: 1280px;
     min-height: 812px; */
     /* min-width: 1440px;
