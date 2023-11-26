@@ -13,7 +13,9 @@ export const NavMenu = () => {
       <NavList>
         {links.map(({ id, href, text }) => (
           <NavItem key={id}>
-            <Link to={href}>{text}</Link>
+            <nav>
+              <Link to={href}>{text}</Link>
+            </nav>
           </NavItem>
         ))}
       </NavList>

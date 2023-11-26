@@ -16,7 +16,6 @@ export const Menu = styled.div`
   left: 0;
 
   overflow-y: auto;
-  /* background-color: ${colors.background}; */
 
   transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 
@@ -38,12 +37,7 @@ export const Menu = styled.div`
     top: 101%;
     background-repeat: no-repeat;
     background-image: url(${BgBurgerMenuDesk});
-    /* object-fit: cover; */
     background-size: 1280px 900px;
-    /* min-width: 1280px;
-    min-height: 812px; */
-    /* min-width: 1440px;
-    height: auto; */
   }
 `;
 
