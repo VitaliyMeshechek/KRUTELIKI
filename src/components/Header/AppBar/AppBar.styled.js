@@ -24,7 +24,7 @@ export const AppBarWrapper = styled.div`
   padding-top: 30px;
   padding-bottom: 5px;
   align-items: center;
-  width: 100%;
+  width: 100vw;
 
   background-color: ${colors.white};
   border: 0;

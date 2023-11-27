@@ -9,7 +9,7 @@ import desktopBG2x from '../images/backgrounds/bg-desktop@2x.png';
 
 export const MainBackground = styled.div`
   position: relative;
-  padding-top: 100px;
+  padding-top: 110px;
   height: 601px;
   background-image: url(${mobileBG1x});
   background-repeat: no-repeat;
@@ -25,7 +25,7 @@ export const MainBackground = styled.div`
   }
 
   @media screen and (min-width: ${breakPoints.tablet}) {
-    padding-top: 200px;
+    padding-top: 126px;
     background-image: url(${tabletBG1x});
     background-size: cover;
     height: 1193px;
@@ -40,7 +40,7 @@ export const MainBackground = styled.div`
     }
   }
   @media screen and (min-width: ${breakPoints.desktop}) {
-    padding-top: 260px;
+    padding-top: 149px;
     background-image: url(${desktopBG1x});
     background-size: 950px 730px;
     height: 800px;

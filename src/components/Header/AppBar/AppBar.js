@@ -24,7 +24,6 @@ export const AppBar = () => {
   const [orderFormOpen, setIsOrderFormOpen] = useState(false);
   const dispatch = useDispatch();
 
-
   const toggleMenu = () => {
     setIsMenuOpen(prevIsMenuOpen => !prevIsMenuOpen);
   };
@@ -50,7 +49,6 @@ export const AppBar = () => {
   //   return;
   // };
 
-
   return (
     <>
       <AppBarWrapper>
@@ -59,9 +57,7 @@ export const AppBar = () => {
             <Logo close={closeMenu} />
 
             <MovingCarSpeed>
-              <OrderBtn
-                toggleOrder={toggleOrderForm}
-              />
+              <OrderBtn toggleOrder={toggleOrderForm} />
             </MovingCarSpeed>
 
             <OrderForm isOrderFormOpen={orderFormOpen} />
